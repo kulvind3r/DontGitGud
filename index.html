@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Git Gud - Game Dealbreaker Prompt Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="site-header">
+            <div class="header-overlay">
+                <h1>Don't Git Gud</h1>
+                <p>Life is too short to get frustrated. Games should be fun, not stressful. Ask AI if a game has things you hate</p>
+            </div>
+        </header>
+
+        <main class="main-layout">
+            
+            <div class="left-column">
+                <section class="card dealbreakers-box">
+                    <h2>Dealbreakers</h2>
+                    <p class="section-desc">Select disliked elements. Hover to see definition:</p>
+                    
+                    <div id="checkbox-grid" class="checkbox-grid"></div>
+                </section>
+
+                <section class="card additional-box">
+                    <h2>Anything else that grinds your gears?</h2>
+                    <textarea id="additional-dealbreakers" placeholder="Type here... (e.g., 'Clunky inventory management')"></textarea>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <section class="card games-box">
+                    <h2>Games to check</h2>
+                    <p class="section-desc">Enter game names, comma separated or one per line</p>
+                    <textarea id="game-list" placeholder="Type here...(e.g.Elden Ring, Cyberpunk 2077)"></textarea>
+                </section>
+
+                <button id="copy-btn" class="btn btn-primary">Copy Prompt Button</button>
+
+                <button id="reset-btn" class="btn btn-secondary">Reset Button</button>
+
+                <section class="card ai-box">
+                    <h2>Public AI websites</h2>
+                    <p class="section-desc">Just paste the copied prompt and press enter</p>
+                    <div class="ai-links-grid">
+                        <a href="https://gemini.google.com" target="_blank" class="ai-link-card">
+                            <span class="ai-name">Gemini</span>
+                            <span class="ai-url">gemini.google.com ↗</span>
+                        </a>
+                        <a href="https://chatgpt.com" target="_blank" class="ai-link-card">
+                            <span class="ai-name">ChatGPT</span>
+                            <span class="ai-url">chatgpt.com ↗</span>
+                        </a>
+                        <a href="https://www.perplexity.ai" target="_blank" class="ai-link-card">
+                            <span class="ai-name">Perplexity</span>
+                            <span class="ai-url">perplexity.ai ↗</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    
+    <div id="toast" class="toast">Prompt copied to clipboard successfully!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
