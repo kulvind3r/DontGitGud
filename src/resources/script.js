@@ -1,23 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Easily add, remove, or modify dealbreakers here
     const DEALBREAKERS_DATA = [
-        { label: "Microtransactions / P2W", description: "Real-money shops, pay-to-win elements, or severe progression roadblocks designed to force purchases." },
-        { label: "Gacha / Loot Boxes", description: "Randomized reward drops, gambling mechanics, or character rolling systems using premium currency." },
-        { label: "Always Online Requirement", description: "Requires a constant internet connection even when playing entirely solo or in single-player modes." },
         { label: "Permadeath / Progression Loss", description: "Losing characters, equipment, or hours of meta-progression permanently upon a single death." },
         { label: "Excessive Grind / Time-gating", description: "Repetitive tasks required to progress or content locked behind real-world daily/weekly timers." },
-        { label: "Souls-like / Punishing Combat", description: "Extremely high difficulty, strict animation framing, and massive penalties for combat mistakes." },
-        { label: "Jump Scares / Horror Focus", description: "Sudden flashing images, loud shocking noises, or an intense psychological horror atmosphere." },
+        { label: "Souls-like / Punishing Difficulty", description: "Extremely high difficulty, strict animation framing, and massive penalties for mistakes." },
         { label: "Long / Unskippable Cutscenes", description: "Forced movie sequences, long unskippable dialogue boxes, more movie than game, or massive text-heavy infodumps." },
-        { label: "Fetch Quests Fatigue", description: "Overreliance on endless back-and-forth item retrieval quests." },
+        { label: "Fetch Quests Fatigue", description: "Overreliance on fetch quests. Repititive missions of identical nature. Go to some place, talk to some character, Bring something to solve a problem." },
         { label: "Open World Map Bloat", description: "Ubisoft-style map designs stuffed with hundreds of copy-pasted icons and checklists." },
-        { label: "Quick Time Events (QTEs)", description: "Heavy reliance on sudden button prompts during cutscenes or cinematic gameplay sequences." },
         { label: "Low / No Checkpoints", description: "Bad checkpoints causing heavy repitition or progression loss that doesn't respect users time." },
         { label: "Getting Lost / Where to Go?", description: "Lack of clear direction, Lack of maps, easy to get lost without clue on where to go next." },
         { label: "Below 60 FPS / 30 FPS Lock", description: "Game is locked below 60 FPS, needs complex workarounds or mods to achieve 60 FPS." },
         { label: "Artificially Padded Game Length", description: "Excessive Padding and fluff to artifically stretch game length." },
-        { label: "Boring story", description: "Shallow, disjoined, and uninspiring story that is not even servicable. Unimpactful characters, nonsense motivation." },
-        { label: "Bugs / Uavoidable Tinkering", description: "Buggy game which requires mods or excessive tinkering to make it playable. Gamebreaking issues." }
+        { label: "Boring story", description: "Shallow, disjoined, and uninspiring story that is not even servicable. Repeatitive nature of missions. Unimpactful characters, nonsense motivation." },
+        { label: "Bugs / Uavoidable Tinkering", description: "Buggy game which requires mods or excessive tinkering to make it playable. Gamebreaking issues." },
+        { label: "Repetitive / Shallow Gameplay", description: "Repititive gameplay, shallow mechanics in combat or puzzles that become boring and feel like a chore instead of engaging." }
     ];
 
     const checkboxGrid = document.getElementById('checkbox-grid');
