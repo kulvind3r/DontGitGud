@@ -13,7 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: "Open World Map Bloat", description: "Ubisoft-style map designs stuffed with hundreds of copy-pasted icons and checklists." },
         { label: "Quick Time Events (QTEs)", description: "Heavy reliance on sudden button prompts during cutscenes or cinematic gameplay sequences." },
         { label: "Low / No Checkpoints", description: "Bad checkpoints causing heavy repitition or progression loss that doesn't respect users time." },
-        { label: "Getting Lost / Where to Go?", description: "Lack of clear direction, Lack of maps, easy to get lost without clue on where to go next." }
+        { label: "Getting Lost / Where to Go?", description: "Lack of clear direction, Lack of maps, easy to get lost without clue on where to go next." },
+        { label: "Below 60 FPS / 30 FPS Lock", description: "Game is locked below 60 FPS, needs complex workarounds or mods to achieve 60 FPS." },
+        { label: "Artificially Padded Game Length", description: "Excessive Padding and fluff to artifically stretch game length." },
+        { label: "Boring story", description: "Shallow, disjoined, and uninspiring story that is not even servicable. Unimpactful characters, nonsense motivation." },
+        { label: "Bugs / Uavoidable Tinkering", description: "Buggy game which requires mods or excessive tinkering to make it playable. Gamebreaking issues." }
     ];
 
     const checkboxGrid = document.getElementById('checkbox-grid');
