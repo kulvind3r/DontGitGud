@@ -20,7 +20,7 @@
     --accent-hover: #e88b4a;
     --success: #639b5e;
     
-    --card-padding: 24px;
+    --card-padding: 15px;
     --border-radius: 0px; /* Sharp corners for pixel feel */
     --ui-border: 4px solid var(--border-color);
     --font: 'VT323', monospace;
@@ -30,8 +30,8 @@ body {
     font-family: var(--font);
     background-color: var(--bg-color);
     color: var(--text-main);
-    line-height: 1.5;
-    padding: 20px;
+    line-height: 1.35;
+    padding: 10px;
     min-height: 100vh;
     font-size: 1.2rem; /* Scaled slightly up for pixel font readability */
     -webkit-font-smoothing: none;
@@ -47,7 +47,7 @@ img {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 15px;
 }
 
 /* ─────────────────────────────────────────────
@@ -56,13 +56,13 @@ img {
 .site-header {
     background: var(--card-bg);
     border: var(--ui-border);
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
 }
 
 .brand-banner {
@@ -86,19 +86,19 @@ img {
 .main-layout {
     display: grid;
     grid-template-columns: 1.7fr 1.3fr;
-    gap: 24px;
+    gap: 15px;
 }
 
 .left-column {
     display: grid;
     grid-template-rows: auto auto;
-    gap: 24px;
+    gap: 15px;
 }
 
 .right-column {
     display: grid;
-    grid-template-rows: auto auto auto 1fr;
-    gap: 24px;
+    grid-template-rows: auto;
+    gap: 15px;
 }
 
 /* ─────────────────────────────────────────────
@@ -108,14 +108,14 @@ img {
     background-color: var(--card-bg);
     border: var(--ui-border);
     padding: var(--card-padding);
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.4);
 }
 
 .card h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: var(--accent);
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     text-transform: uppercase;
     text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
 }
@@ -254,22 +254,22 @@ textarea:focus {
 }
 
 #additional-dealbreakers { height: 110px; }
-#game-list { height: 140px; }
+#game-list { height: 100px; }
 
 /* ─────────────────────────────────────────────
    Dynamic Button Layout
 ───────────────────────────────────────────── */
 .btn {
     width: 100%;
-    padding: 14px;
+    padding: 10px;
     border-radius: 0;
     font-family: inherit;
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     text-transform: uppercase;
     cursor: pointer;
     border: 3px solid var(--border-color);
     outline: none;
-    box-shadow: 4px 4px 0px rgba(0,0,0,0.4);
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.4);
     transition: transform 0.1s, box-shadow 0.1s;
 }
 
@@ -310,11 +310,11 @@ textarea:focus {
 .ai-link-card {
     background-color: var(--bg-color);
     border: 3px solid var(--border-color);
-    padding: 12px;
+    padding: 6px;
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
     box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
     transition: transform 0.1s, background-color 0.1s;
 }
@@ -333,7 +333,7 @@ textarea:focus {
 }
 
 .ai-url {
-    font-size: 1rem;
+    font-size: 1.15rem;
     color: var(--text-muted);
 }
 
