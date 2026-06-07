@@ -302,7 +302,7 @@ textarea:focus {
 ───────────────────────────────────────────── */
 .ai-links-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.1fr 0.1fr 0.1fr;
     gap: 16px;
     margin-top: 5px;
 }
@@ -372,4 +372,20 @@ textarea:focus {
     .checkbox-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ─────────────────────────────────────────────
+   Footer
+───────────────────────────────────────────── */
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    position: fixed;
+    bottom: 15px;
+    left: 45%;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--accent);
+    text-transform: uppercase;
 }
