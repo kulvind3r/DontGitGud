@@ -7,7 +7,7 @@ RES_DIR="resources"
 INDEX_FILE="index.html"
 
 # List your assets here (space-separated)
-TARGET_FILES=("script.js" "style.css" "favicon.png")
+TARGET_FILES=("script.js" "style.css" "favicon.png" "banner.png")
 
 echo "[BUILD] Starting build process..."
 echo "--------------------------------------------------"
