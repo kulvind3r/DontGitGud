@@ -1,4 +1,6 @@
-/* CSS Reset & Variables */
+/* ─────────────────────────────────────────────
+   CSS Reset & Variables (Pixel Art Theme)
+───────────────────────────────────────────── */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,27 +8,38 @@
 }
 
 :root {
-    --bg-color: #0b0f19;
-    --card-bg: #141b2b;
-    --border-color: #232e44;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --accent: #6366f1;
-    --accent-hover: #4f46e5;
-    --danger: #ef4444;
-    --danger-hover: #dc2626;
-    --success: #10b981;
+    /* Pulled from the banner and favicon */
+    --bg-color: #2b3331;
+    --card-bg: #36423f;
+    --border-color: #1a1e1d;
+    --text-main: #e6eadd;
+    --text-muted: #a3b5aa;
+    
+    /* Campfire orange and warm hover */
+    --accent: #df7126;
+    --accent-hover: #e88b4a;
+    --success: #639b5e;
+    
     --card-padding: 24px;
-    --border-radius: 12px;
+    --border-radius: 0px; /* Sharp corners for pixel feel */
+    --ui-border: 4px solid var(--border-color);
+    --font: 'VT323', monospace;
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-family: var(--font);
     background-color: var(--bg-color);
     color: var(--text-main);
     line-height: 1.5;
     padding: 20px;
     min-height: 100vh;
+    font-size: 1.2rem; /* Scaled slightly up for pixel font readability */
+    -webkit-font-smoothing: none;
+}
+
+/* Ensures pixel art remains sharp when scaled */
+img {
+    image-rendering: pixelated;
 }
 
 .app-container {
@@ -34,108 +47,104 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
 }
 
-/* Banner / Header Component */
+/* ─────────────────────────────────────────────
+   Banner / Header Component
+───────────────────────────────────────────── */
 .site-header {
-    background: linear-gradient(135deg, #1e1b4b 0%, #311042 50%, #111827 100%);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    padding: 40px 30px;
+    background: var(--card-bg);
+    border: var(--ui-border);
+    padding: 20px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-.site-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.brand-banner {
+    display: block;
     width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
-    pointer-events: none;
-}
-
-.site-header h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    letter-spacing: -0.05em;
-    background: linear-gradient(to right, #ffffff, #a5b4fc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 8px;
+    max-width: 700px;
+    height: auto;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
 .site-header p {
     color: var(--text-muted);
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
 }
 
-/* Main Structure & Grid Matching the Layout PNG */
+/* ─────────────────────────────────────────────
+   Main Structure
+───────────────────────────────────────────── */
 .main-layout {
     display: grid;
     grid-template-columns: 1.7fr 1.3fr;
-    gap: 20px;
+    gap: 24px;
 }
 
 .left-column {
     display: grid;
     grid-template-rows: auto auto;
-    gap: 20px;
+    gap: 24px;
 }
 
 .right-column {
     display: grid;
     grid-template-rows: auto auto auto 1fr;
-    gap: 20px;
+    gap: 24px;
 }
 
-/* Generic Card Styles */
+/* ─────────────────────────────────────────────
+   Generic Card Styles
+───────────────────────────────────────────── */
 .card {
     background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
+    border: var(--ui-border);
     padding: var(--card-padding);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
 }
 
 .card h2 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text-main);
-    margin-bottom: 12px;
-    letter-spacing: -0.02em;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--accent);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
 }
 
 .section-desc {
-    font-size: 0.9rem;
+    font-size: 1.15rem;
     color: var(--text-muted);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
-/* Checkboxes Box Design */
+/* ─────────────────────────────────────────────
+   Checkboxes Box Design
+───────────────────────────────────────────── */
 .checkbox-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 16px;
 }
 
 .checkbox-container {
     display: flex;
     align-items: center;
     position: relative;
-    padding-left: 32px;
+    padding-left: 36px;
     cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #cbd5e1;
+    font-size: 1.2rem;
+    color: var(--text-muted);
     user-select: none;
-    transition: color 0.2s ease;
+    transition: color 0.1s;
 }
 
 .checkbox-container:hover {
@@ -150,29 +159,31 @@ body {
     width: 0;
 }
 
+/* Chunky retro checkbox */
 .custom-checkbox {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    height: 20px;
-    width: 20px;
-    background-color: #1e293b;
-    border: 1px solid #334155;
-    border-radius: 6px;
-    transition: all 0.2s ease;
+    height: 24px;
+    width: 24px;
+    background-color: var(--bg-color);
+    border: 3px solid var(--border-color);
+    transition: background-color 0.1s;
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.3);
 }
 
 .checkbox-container:hover input ~ .custom-checkbox {
     border-color: var(--accent);
-    background-color: #1e1b4b;
 }
 
 .checkbox-container input:checked ~ .custom-checkbox {
     background-color: var(--accent);
-    border-color: var(--accent);
+    border-color: var(--border-color);
+    box-shadow: inset 0px 0px 0px rgba(0,0,0,0);
 }
 
+/* Pixel art style inner check/fill */
 .custom-checkbox::after {
     content: "";
     position: absolute;
@@ -181,19 +192,16 @@ body {
 
 .checkbox-container input:checked ~ .custom-checkbox::after {
     display: block;
-}
-
-.checkbox-container .custom-checkbox::after {
-    left: 6.5px;
-    top: 3px;
-    width: 5px;
+    left: 4px;
+    top: 4px;
+    width: 10px;
     height: 10px;
-    border: solid white;
-    border-width: 0 2.5px 2.5px 0;
-    transform: rotate(45deg);
+    background-color: var(--border-color);
 }
 
-/* CSS Tooltip Engine Rules */
+/* ─────────────────────────────────────────────
+   CSS Tooltip Engine Rules
+───────────────────────────────────────────── */
 .checkbox-container[data-tooltip] {
     position: relative;
 }
@@ -205,151 +213,147 @@ body {
     left: 50%;
     transform: translateX(-50%) translateY(4px);
     width: 240px;
-    background-color: #0f172a;
+    background-color: var(--border-color);
     color: var(--text-main);
-    font-size: 0.8rem;
-    font-weight: 400;
+    font-family: var(--font);
+    font-size: 1.1rem;
     padding: 10px 14px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border: 2px solid var(--text-muted);
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.5);
     opacity: 0;
     pointer-events: none;
     z-index: 100;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition: opacity 0.1s;
     white-space: normal;
-    line-height: 1.4;
+    line-height: 1.2;
 }
 
-/* Hover State to Trigger Tooltip Display */
 .checkbox-container[data-tooltip]:hover::after {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
 
-/* Textareas styling */
+/* ─────────────────────────────────────────────
+   Textareas styling
+───────────────────────────────────────────── */
 textarea {
     width: 100%;
-    background-color: #0f172a;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
+    background-color: var(--bg-color);
+    border: 3px solid var(--border-color);
     color: var(--text-main);
     padding: 14px;
     font-family: inherit;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     resize: none;
     outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: inset 4px 4px 0px rgba(0,0,0,0.2);
 }
 
 textarea:focus {
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
 }
 
-#additional-dealbreakers {
-    height: 110px;
-}
+#additional-dealbreakers { height: 110px; }
+#game-list { height: 140px; }
 
-#game-list {
-    height: 140px;
-}
-
-/* Dynamic Button Layout */
+/* ─────────────────────────────────────────────
+   Dynamic Button Layout
+───────────────────────────────────────────── */
 .btn {
     width: 100%;
-    padding: 16px;
-    border-radius: var(--border-radius);
+    padding: 14px;
+    border-radius: 0;
     font-family: inherit;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
-    border: none;
+    border: 3px solid var(--border-color);
     outline: none;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.4);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.4);
 }
 
 .btn-primary {
     background-color: var(--accent);
-    color: white;
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    color: #000;
 }
 
 .btn-primary:hover {
     background-color: var(--accent-hover);
 }
 
-.btn-primary:active {
-    transform: translateY(1px);
-}
-
 .btn-secondary {
-    background-color: #1e293b;
-    color: #cbd5e1;
-    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-main);
 }
 
 .btn-secondary:hover {
-    background-color: #334155;
-    color: white;
+    background-color: var(--border-color);
+    color: var(--accent);
 }
 
-.btn-secondary:active {
-    transform: translateY(1px);
-}
-
-/* AI Links Platform Configuration */
+/* ─────────────────────────────────────────────
+   AI Links Platform Configuration
+───────────────────────────────────────────── */
 .ai-links-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 16px;
     margin-top: 5px;
 }
 
 .ai-link-card {
-    background-color: #0f172a;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
+    background-color: var(--bg-color);
+    border: 3px solid var(--border-color);
     padding: 12px;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     gap: 4px;
-    transition: all 0.2s ease;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
+    transition: transform 0.1s, background-color 0.1s;
 }
 
 .ai-link-card:hover {
     border-color: var(--accent);
-    background-color: #1e1b4b;
-    transform: translateY(-2px);
+    background-color: var(--border-color);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.4);
 }
 
 .ai-name {
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--text-main);
+    font-size: 1.3rem;
+    color: var(--accent);
+    text-transform: uppercase;
 }
 
 .ai-url {
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: var(--text-muted);
 }
 
-/* Feedback Mechanism: Toast Notification */
+/* ─────────────────────────────────────────────
+   Feedback Mechanism: Toast Notification
+───────────────────────────────────────────── */
 .toast {
     position: fixed;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%) translateY(100px);
     background-color: var(--success);
-    color: white;
+    color: #fff;
     padding: 12px 24px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    border: 3px solid var(--border-color);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.4);
     opacity: 0;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+    transition: transform 0.2s, opacity 0.2s;
     z-index: 1000;
 }
 
@@ -358,7 +362,9 @@ textarea:focus {
     opacity: 1;
 }
 
-/* Seamless Responsiveness Breakpoint */
+/* ─────────────────────────────────────────────
+   Seamless Responsiveness Breakpoint
+───────────────────────────────────────────── */
 @media (max-width: 850px) {
     .main-layout {
         grid-template-columns: 1fr;

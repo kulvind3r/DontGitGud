@@ -3,7 +3,7 @@ $srcDir    = "src"
 $buildDir  = "build"
 $resDir    = "resources"
 $indexFile = "index.html"
-$targetFiles = @("script.js", "style.css", "favicon.png")
+$targetFiles = @("script.js", "style.css", "favicon.png", "banner.png")
 
 Write-Host "[BUILD] Starting build process..." -ForegroundColor Cyan
 Write-Host "--------------------------------------------------"
