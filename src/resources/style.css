@@ -45,7 +45,7 @@ img {
 }
 
 .app-container {
-    max-width: 1200px;
+    max-width: 1375px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -308,7 +308,7 @@ textarea:focus {
 ───────────────────────────────────────────── */
 .ai-links-grid {
     display: grid;
-    grid-template-columns: max-content max-content max-content;
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     margin-top: 5px;
 }
@@ -323,6 +323,7 @@ textarea:focus {
     gap: 2px;
     box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
     transition: transform 0.1s, background-color 0.1s;
+    min-width: 0; /* Allows grid items to shrink below content size to prevent overflow */
 }
 
 .ai-link-card:hover {
