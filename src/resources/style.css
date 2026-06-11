@@ -40,6 +40,8 @@ body {
 /* Ensures pixel art remains sharp when scaled */
 img {
     image-rendering: pixelated;
+    max-width: 100%;
+    height: auto;
 }
 
 .app-container {
@@ -48,6 +50,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    overflow-x: hidden; /* Prevents horizontal overflow on small screens */
 }
 
 /* ─────────────────────────────────────────────
@@ -109,6 +112,9 @@ img {
     border: var(--ui-border);
     padding: var(--card-padding);
     box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.4);
+    max-width: 100%; /* Ensures cards never exceed container width */
+    overflow: hidden; /* Clips overflowing content */
+    word-break: break-word; /* Prevents long text from breaking layout */
 }
 
 .card h2 {
@@ -302,7 +308,7 @@ textarea:focus {
 ───────────────────────────────────────────── */
 .ai-links-grid {
     display: grid;
-    grid-template-columns: 0.1fr 0.1fr 0.1fr;
+    grid-template-columns: max-content max-content max-content;
     gap: 16px;
     margin-top: 5px;
 }
@@ -379,13 +385,14 @@ textarea:focus {
 ───────────────────────────────────────────── */
 
 .github-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    position: fixed;
-    bottom: 15px;
-    left: 45%;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
     gap: 0.5rem;
     font-size: 1.3rem;
     color: var(--accent);
     text-transform: uppercase;
+    text-decoration: none;
 }
