@@ -34,7 +34,6 @@ body {
     padding: 10px;
     min-height: 100vh;
     font-size: 1.2rem; /* Scaled slightly up for pixel font readability */
-    -webkit-font-smoothing: none;
 }
 
 /* Ensures pixel art remains sharp when scaled */
